@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsnd --respawn ./src/index.ts",
-    "build": "rm -rf ./dis && tsc",
+    "build": "rm -rf ./dist && tsc",
     "serve": "rm -rf ./dist && tsc && node ./dist/index.js"
   },
   "devDependencies": {
