@@ -4,7 +4,9 @@ import { Model } from 'sequelize'
 interface UserInterface {
   id: number
   name: string
+  username: string
   email: string
+  password: string
 }
 
 module.exports = (sequelize: any, DataTypes: any) => {
@@ -17,7 +19,9 @@ module.exports = (sequelize: any, DataTypes: any) => {
 
     id!: number
     name!: string
+    username!: string
     email!: string
+    password!: string
 
     public readonly createdAt!: Date
     public readonly updatedAt!: Date
@@ -34,7 +38,9 @@ module.exports = (sequelize: any, DataTypes: any) => {
       primaryKey: true,
     },
     name: DataTypes.STRING,
-    email: DataTypes.STRING
+    username: DataTypes.STRING,
+    email: DataTypes.STRING,
+    password: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'User',
